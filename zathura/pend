@@ -1,0 +1,47 @@
+# Set background and foreground colors
+set window-background           "rgba(0,0,0,1)"         # black background
+set statusbar-bg                "rgba(0,0,0,1)"         # black background for the status bar
+set statusbar-fg                "rgba(169,169,169,1)"    # gray10 for the status bar text (lighter gray)
+
+# Text color in the document
+set highlight-color             "rgba(200,200,50,0.5)"  # muted yellow for highlight
+set highlight-active-color      "rgba(200,100,50,0.5)"   # muted orange for active highlight
+set default-bg                  "rgba(0,0,0,1)"         # black background for text area
+set default-fg                  "rgba(169,169,169,1)"    # gray10 (gray text for content)
+
+# Set input bar colors
+set inputbar-bg                 "rgba(10,10,10,1)"      # very dark gray for the input bar background
+set inputbar-fg                 "rgba(200,200,200,1)"   # light gray text for the input bar
+
+# Set notification bar colors
+set notification-error-bg       "rgba(10,10,10,1)"      # very dark gray background
+set notification-error-fg       "rgba(255,0,0,1)"       # bright red text for error notifications
+set notification-warning-bg     "rgba(10,10,10,1)"      # dark gray background for warnings
+set notification-warning-fg     "rgba(200,200,50,1)"    # muted yellow for warning notifications
+set notification-bg             "rgba(10,10,10,1)"      # dark gray background for notifications
+set notification-fg             "rgba(100,200,100,1)"   # muted green text for general notifications
+
+# Set completion box colors
+set completion-bg               "rgba(20,20,20,1)"      # very dark background for completion box
+set completion-fg               "rgba(200,200,200,1)"   # light gray text for completion box
+set completion-group-bg         "rgba(10,10,10,1)"      # dark gray background for completion groups
+set completion-group-fg         "rgba(169,169,169,1)"    # gray text for completion group names
+set completion-highlight-bg     "rgba(50,50,50,1)"      # dark gray for highlighted item background
+set completion-highlight-fg     "rgba(200,200,200,1)"   # light gray text for highlighted item
+
+# Set index colors (for book index or table of contents)
+set index-bg                    "rgba(20,20,20,1)"      # dark background for index
+set index-fg                    "rgba(169,169,169,1)"    # gray text for index
+set index-active-bg             "rgba(50,50,50,1)"      # dark gray for active index item
+set index-active-fg             "rgba(200,200,200,1)"   # light gray for active index item text
+
+# Recolor the book content
+set recolor-lightcolor          "rgba(0,0,0,1)"         # black background for recolor
+set recolor-darkcolor           "rgba(169,169,169,1)"    # gray text color for recolor
+set recolor                     "true"                   # enable recoloring
+set recolor-keephue             "true"                   # keep original color hues for images and other content
+
+# Set loading and render colors
+set render-loading              true
+set render-loading-bg           "rgba(0,0,0,1)"         # black background for loading screen
+set render-loading-fg           "rgba(169,169,169,1)"    # gray text for loading
