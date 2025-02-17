@@ -4,10 +4,10 @@ let maplocalleader = ","
 nnoremap <silent> <leader>h :term<CR>
 nnoremap <leader>pv :Ex<CR>
 
+nnoremap <silent><Esc><Esc> :nohl<cr>
+
 noremap <leader>; q: 
 nnoremap <leader>/ q/
-
-nnoremap <silent> <Esc> :noh<CR>
 
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>

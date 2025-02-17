@@ -12,6 +12,7 @@ alias mv='mv -i'
 alias ll='ls -lh'
 alias grep='grep --color=auto'
 alias cdi='cd "$( find . -maxdepth 1 -type d ! -name ".*" | fzy)"'
+alias clear='echo "use ^L instead :)"'
 
 # xbps
 alias i='doas xbps-install -S'
@@ -28,7 +29,6 @@ set -o vi
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert  'Control-l: clear-screen'
 
-#eval "$(zoxide init --cmd cd bash)"
-
-export PS1='\[\e[1;36m\]\W\[\e[0m\] \[\e[1;31m\]>\[\e[0m\] '
-#PS1='[\u@\[\e[34m\]\h\[\e[m\] \w]\$ '
+export PS1='\[\e[1;35m\]\w\[\e[0m\] \[\e[20m\]%\[\e[0m\] '
+#export PS1='\[\e[1;38m\]\w\[\e[0m\] % '
+#PS1='\u@\[\e[m\]\h\[\e[m\] \w\$ '
