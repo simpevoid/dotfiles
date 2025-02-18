@@ -28,18 +28,17 @@ hi! link mkdURL mkdInlineURL
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   let g:terminal_ansi_colors = ['#393552', '#eb6f92', '#3e8fb0', '#f6c177', '#9ccfd8', '#c4a7e7', '#ea9a97', '#e0def4', '#908caa', '#eb6f92', '#3e8fb0', '#f6c177', '#9ccfd8', '#c4a7e7', '#ea9a97', '#e0def4']
 endif
-  hi Normal guifg=NONE guibg=NONE gui=NONE cterm=NONE
-  hi NormalNC guifg=#e0def4 guibg=#232136 gui=NONE cterm=NONE
-  hi SignColumn guifg=#e0def4 guibg=#232136 gui=NONE cterm=NONE
-  hi StatusLineNC guifg=#6e6a86 guibg=#232136 gui=NONE cterm=NONE
-  hi DarkenedPanel guifg=NONE guibg=#2a273f gui=NONE cterm=NONE
-  hi DarkenedStatusline guifg=NONE guibg=#2a273f gui=NONE cterm=NONE
-  hi Folded guifg=#e0def4 guibg=#2a273f gui=NONE cterm=NONE
-  hi NormalFloat guifg=NONE guibg=NONE gui=NONE cterm=NONE
-  hi Pmenu guifg=#908caa guibg=#2a273f gui=NONE cterm=NONE
-  hi StatusLine guifg=#908caa guibg=#2a273f gui=NONE cterm=NONE
-  hi TabLine guifg=#908caa guibg=#2a273f gui=NONE cterm=NONE
-  hi TabLineFill guifg=NONE guibg=#2a273f gui=NONE cterm=NONE
+hi Normal guifg=NONE guibg=NONE gui=NONE cterm=NONE
+hi NormalNC guifg=#e0def4 guibg=#232136 gui=NONE cterm=NONE
+hi SignColumn guifg=#e0def4 guibg=#232136 gui=NONE cterm=NONE
+hi StatusLineNC guifg=#6e6a86 guibg=#232136 gui=NONE cterm=NONE
+hi DarkenedPanel guifg=NONE guibg=#2a273f gui=NONE cterm=NONE
+hi DarkenedStatusline guifg=NONE guibg=#2a273f gui=NONE cterm=NONE
+hi Folded guifg=#e0def4 guibg=#2a273f gui=NONE cterm=NONE
+hi NormalFloat guifg=NONE guibg=NONE gui=NONE cterm=NONE
+hi StatusLine guifg=#908caa guibg=#2a273f gui=NONE cterm=NONE
+hi TabLine guifg=#908caa guibg=#2a273f gui=NONE cterm=NONE
+hi TabLineFill guifg=NONE guibg=#2a273f gui=NONE cterm=NONE
 hi Comment guifg=#6e6a86 guibg=NONE gui=NONE cterm=NONE
 hi Comment gui=NONE cterm=NONE
 hi ColorColumn guifg=NONE guibg=#393552 gui=NONE cterm=NONE
@@ -62,10 +61,13 @@ hi MatchParen guifg=#e0def4 guibg=#44415a gui=NONE cterm=NONE
 hi ModeMsg guifg=#908caa guibg=NONE gui=NONE cterm=NONE
 hi MoreMsg guifg=#c4a7e7 guibg=NONE gui=NONE cterm=NONE
 hi NonText guifg=#6e6a86 guibg=NONE gui=NONE cterm=NONE
+
+hi Pmenu guifg=#908caa guibg=#2a273f gui=NONE cterm=NONE
 hi PmenuSbar guifg=NONE guibg=#2a283e gui=NONE cterm=NONE
 hi PmenuSel guifg=#e0def4 guibg=#393552 gui=NONE cterm=NONE
 hi PmenuThumb guifg=NONE guibg=#44415a gui=NONE cterm=NONE
-hi PmenuMatch guifg=#e0def4 guibg=NONE gui=NONE cterm=NONE
+hi PmenuMatch guifg=#2a273f guibg=#908caa gui=NONE cterm=NONE
+
 hi Question guifg=#f6c177 guibg=NONE gui=NONE cterm=NONE
 hi Search guifg=NONE guibg=#44415a gui=NONE cterm=NONE
 hi SpecialKey guifg=#9ccfd8 guibg=NONE gui=NONE cterm=NONE
@@ -119,8 +121,8 @@ hi htmlH2 guifg=#9ccfd8 guibg=NONE gui=bold cterm=bold
 hi htmlH3 guifg=#ea9a97 guibg=NONE gui=bold cterm=bold
 hi htmlH4 guifg=#f6c177 guibg=NONE gui=bold cterm=bold
 hi htmlH5 guifg=#3e8fb0 guibg=NONE gui=bold cterm=bold
-  hi htmlItalic guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
-    hi htmlItalic gui=NONE cterm=NONE
+hi htmlItalic guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
+hi htmlItalic gui=NONE cterm=NONE
 hi htmlLink guifg=#c4a7e7 guibg=NONE gui=NONE cterm=NONE
 hi htmlTag guifg=#908caa guibg=NONE gui=NONE cterm=NONE
 hi htmlTagN guifg=#e0def4 guibg=NONE gui=NONE cterm=NONE
@@ -133,8 +135,8 @@ hi markdownH4 guifg=#f6c177 guibg=NONE gui=bold cterm=bold
 hi markdownH5 guifg=#3e8fb0 guibg=NONE gui=bold cterm=bold
 hi markdownH6 guifg=#9ccfd8 guibg=NONE gui=bold cterm=bold
 hi markdownLinkText guifg=#c4a7e7 guibg=NONE gui=underline cterm=underline
-  hi mkdCode guifg=#9ccfd8 guibg=NONE gui=NONE cterm=NONE
-    hi mkdCode gui=NONE cterm=NONE
+hi mkdCode guifg=#9ccfd8 guibg=NONE gui=NONE cterm=NONE
+hi mkdCode gui=NONE cterm=NONE
 hi mkdCodeDelimiter guifg=#ea9a97 guibg=NONE gui=NONE cterm=NONE
 hi mkdCodeEnd guifg=#9ccfd8 guibg=NONE gui=NONE cterm=NONE
 hi mkdCodeStart guifg=#9ccfd8 guibg=NONE gui=NONE cterm=NONE
@@ -155,153 +157,133 @@ hi VimwikiLink guifg=#c4a7e7 guibg=NONE gui=underline cterm=underline
 hi VimwikiList guifg=#c4a7e7 guibg=NONE gui=NONE cterm=NONE
 hi VimwikiNoExistsLink guifg=#eb6f92 guibg=NONE gui=NONE cterm=NONE
 
-if s:t_Co >= 256
-  if get(g:,'disable_bg',0)
-    hi Normal ctermfg=189 ctermbg=NONE cterm=NONE
-    hi NormalNC ctermfg=189 ctermbg=NONE cterm=NONE
-    hi SignColumn ctermfg=189 ctermbg=NONE cterm=NONE
-    hi StatusLineNC ctermfg=60 ctermbg=NONE cterm=NONE
-  else
-    hi Normal ctermfg=189 ctermbg=235 cterm=NONE
-    hi NormalNC ctermfg=189 ctermbg=235 cterm=NONE
-    hi SignColumn ctermfg=189 ctermbg=235 cterm=NONE
-    hi StatusLineNC ctermfg=60 ctermbg=235 cterm=NONE
-  endif
-  if get(g:,'disable_float_bg',0)
-    hi DarkenedPanel ctermfg=NONE ctermbg=NONE cterm=NONE
-    hi DarkenedStatusline ctermfg=NONE ctermbg=NONE cterm=NONE
-    hi Folded ctermfg=189 ctermbg=NONE cterm=NONE
-    hi NormalFloat ctermfg=189 ctermbg=NONE cterm=NONE
-    hi Pmenu ctermfg=103 ctermbg=NONE cterm=NONE
-    hi StatusLine ctermfg=103 ctermbg=NONE cterm=NONE
-    hi TabLine ctermfg=103 ctermbg=NONE cterm=NONE
-    hi TabLineFill ctermfg=NONE ctermbg=NONE cterm=NONE
-  else
-    hi DarkenedPanel ctermfg=NONE ctermbg=235 cterm=NONE
-    hi DarkenedStatusline ctermfg=NONE ctermbg=235 cterm=NONE
-    hi Folded ctermfg=189 ctermbg=235 cterm=NONE
-    hi NormalFloat ctermfg=189 ctermbg=235 cterm=NONE
-    hi Pmenu ctermfg=103 ctermbg=235 cterm=NONE
-    hi StatusLine ctermfg=103 ctermbg=235 cterm=NONE
-    hi TabLine ctermfg=103 ctermbg=235 cterm=NONE
-    hi TabLineFill ctermfg=NONE ctermbg=235 cterm=NONE
-  endif
-    hi Comment ctermfg=60 ctermbg=NONE cterm=NONE
-      hi Comment cterm=NONE
-  hi ColorColumn ctermfg=NONE ctermbg=237 cterm=NONE
-  hi Conceal ctermfg=NONE ctermbg=NONE cterm=NONE
-  hi CursorColumn ctermfg=NONE ctermbg=235 cterm=NONE
-  hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
-  hi CursorLineNr ctermfg=189 ctermbg=NONE cterm=NONE
-  hi DiffAdd ctermfg=NONE ctermbg=238 cterm=NONE
-  hi DiffChange ctermfg=NONE ctermbg=237 cterm=NONE
-  hi DiffDelete ctermfg=NONE ctermbg=53 cterm=NONE
-  hi DiffText ctermfg=NONE ctermbg=237 cterm=NONE
-  hi Directory ctermfg=152 ctermbg=NONE cterm=NONE
-  hi ErrorMsg ctermfg=204 ctermbg=NONE cterm=bold
-  hi FloatBorder ctermfg=60 ctermbg=NONE cterm=NONE
-  hi FloatTitle ctermfg=60 ctermbg=NONE cterm=NONE
-  hi FoldColumn ctermfg=60 ctermbg=NONE cterm=NONE
-  hi IncSearch ctermfg=235 ctermbg=174 cterm=NONE
-  hi LineNr ctermfg=60 ctermbg=NONE cterm=NONE
-  hi MatchParen ctermfg=189 ctermbg=60 cterm=NONE
-  hi ModeMsg ctermfg=103 ctermbg=NONE cterm=NONE
-  hi MoreMsg ctermfg=183 ctermbg=NONE cterm=NONE
-  hi NonText ctermfg=60 ctermbg=NONE cterm=NONE
-  hi PmenuSbar ctermfg=NONE ctermbg=235 cterm=NONE
-  hi PmenuSel ctermfg=189 ctermbg=237 cterm=NONE
-  hi PmenuThumb ctermfg=NONE ctermbg=60 cterm=NONE
-  hi Question ctermfg=222 ctermbg=NONE cterm=NONE
-  hi Search ctermfg=NONE ctermbg=60 cterm=NONE
-  hi SpecialKey ctermfg=152 ctermbg=NONE cterm=NONE
-  hi SpellBad ctermfg=NONE ctermbg=NONE cterm=undercurl
-  hi SpellCap ctermfg=NONE ctermbg=NONE cterm=undercurl
-  hi SpellLocal ctermfg=NONE ctermbg=NONE cterm=undercurl
-  hi SpellRare ctermfg=NONE ctermbg=NONE cterm=undercurl
-  hi TabLineSel ctermfg=189 ctermbg=237 cterm=NONE
-  hi Title ctermfg=189 ctermbg=NONE cterm=NONE
-  hi VertSplit ctermfg=60 ctermbg=NONE cterm=NONE
-  hi Visual ctermfg=NONE ctermbg=60 cterm=NONE
-  hi WarningMsg ctermfg=222 ctermbg=NONE cterm=NONE
-  hi Boolean ctermfg=174 ctermbg=NONE cterm=NONE
-  hi Character ctermfg=NONE ctermbg=NONE cterm=NONE
-  hi Conditional ctermfg=31 ctermbg=NONE cterm=NONE
-  hi Constant ctermfg=222 ctermbg=NONE cterm=NONE
-  hi Debug ctermfg=174 ctermbg=NONE cterm=NONE
-  hi Define ctermfg=183 ctermbg=NONE cterm=NONE
-  hi Delimiter ctermfg=103 ctermbg=NONE cterm=NONE
-  hi Error ctermfg=204 ctermbg=NONE cterm=NONE
-  hi Exception ctermfg=31 ctermbg=NONE cterm=NONE
-  hi Float ctermfg=222 ctermbg=NONE cterm=NONE
-  hi Function ctermfg=174 ctermbg=NONE cterm=NONE
-  hi Identifier ctermfg=174 ctermbg=NONE cterm=NONE
-  hi Include ctermfg=183 ctermbg=NONE cterm=NONE
-  hi Keyword ctermfg=31 ctermbg=NONE cterm=NONE
-  hi Label ctermfg=152 ctermbg=NONE cterm=NONE
-  hi Macro ctermfg=183 ctermbg=NONE cterm=NONE
-  hi Number ctermfg=NONE ctermbg=NONE cterm=NONE
-  hi Operator ctermfg=103 ctermbg=NONE cterm=NONE
-  hi PreCondit ctermfg=183 ctermbg=NONE cterm=NONE
-  hi PreProc ctermfg=183 ctermbg=NONE cterm=NONE
-  hi Repeat ctermfg=31 ctermbg=NONE cterm=NONE
-  hi Special ctermfg=174 ctermbg=NONE cterm=NONE
-  hi SpecialChar ctermfg=174 ctermbg=NONE cterm=NONE
-  hi SpecialComment ctermfg=183 ctermbg=NONE cterm=NONE
-  hi Statement ctermfg=31 ctermbg=NONE cterm=NONE
-  hi StorageClass ctermfg=152 ctermbg=NONE cterm=NONE
-  hi String ctermfg=NONE ctermbg=NONE cterm=NONE
-  hi Structure ctermfg=152 ctermbg=NONE cterm=NONE
-  hi Tag ctermfg=174 ctermbg=NONE cterm=NONE
-  hi Todo ctermfg=183 ctermbg=NONE cterm=NONE
-  hi Type ctermfg=152 ctermbg=NONE cterm=NONE
-  hi Typedef ctermfg=152 ctermbg=NONE cterm=NONE
-  hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline
-  hi htmlArg ctermfg=183 ctermbg=NONE cterm=NONE
-  hi htmlBold ctermfg=NONE ctermbg=NONE cterm=bold
-  hi htmlEndTag ctermfg=103 ctermbg=NONE cterm=NONE
-  hi htmlH1 ctermfg=183 ctermbg=NONE cterm=bold
-  hi htmlH2 ctermfg=152 ctermbg=NONE cterm=bold
-  hi htmlH3 ctermfg=174 ctermbg=NONE cterm=bold
-  hi htmlH4 ctermfg=222 ctermbg=NONE cterm=bold
-  hi htmlH5 ctermfg=31 ctermbg=NONE cterm=bold
-    hi htmlItalic ctermfg=NONE ctermbg=NONE cterm=NONE
-      hi htmlItalic cterm=NONE
-  hi htmlLink ctermfg=183 ctermbg=NONE cterm=NONE
-  hi htmlTag ctermfg=103 ctermbg=NONE cterm=NONE
-  hi htmlTagN ctermfg=189 ctermbg=NONE cterm=NONE
-  hi htmlTagName ctermfg=152 ctermbg=NONE cterm=NONE
-  hi markdownDelimiter ctermfg=103 ctermbg=NONE cterm=NONE
-  hi markdownH1 ctermfg=183 ctermbg=NONE cterm=bold
-  hi markdownH2 ctermfg=152 ctermbg=NONE cterm=bold
-  hi markdownH3 ctermfg=174 ctermbg=NONE cterm=bold
-  hi markdownH4 ctermfg=222 ctermbg=NONE cterm=bold
-  hi markdownH5 ctermfg=31 ctermbg=NONE cterm=bold
-  hi markdownH6 ctermfg=152 ctermbg=NONE cterm=bold
-  hi markdownLinkText ctermfg=183 ctermbg=NONE cterm=underline
-    hi mkdCode ctermfg=152 ctermbg=NONE cterm=NONE
-      hi mkdCode cterm=NONE
-  hi mkdCodeDelimiter ctermfg=174 ctermbg=NONE cterm=NONE
-  hi mkdCodeEnd ctermfg=152 ctermbg=NONE cterm=NONE
-  hi mkdCodeStart ctermfg=152 ctermbg=NONE cterm=NONE
-  hi mkdFootnotes ctermfg=152 ctermbg=NONE cterm=NONE
-  hi mkdID ctermfg=152 ctermbg=NONE cterm=underline
-  hi mkdInlineURL ctermfg=183 ctermbg=NONE cterm=underline
-  hi mkdListItemLine ctermfg=189 ctermbg=NONE cterm=NONE
-  hi mkdRule ctermfg=103 ctermbg=NONE cterm=NONE
-  hi VimwikiHR ctermfg=103 ctermbg=NONE cterm=NONE
-  hi VimwikiHeader1 ctermfg=183 ctermbg=NONE cterm=bold
-  hi VimwikiHeader2 ctermfg=152 ctermbg=NONE cterm=bold
-  hi VimwikiHeader3 ctermfg=174 ctermbg=NONE cterm=bold
-  hi VimwikiHeader4 ctermfg=222 ctermbg=NONE cterm=bold
-  hi VimwikiHeader5 ctermfg=31 ctermbg=NONE cterm=bold
-  hi VimwikiHeader6 ctermfg=152 ctermbg=NONE cterm=bold
-  hi VimwikiHeaderChar ctermfg=31 ctermbg=NONE cterm=NONE
-  hi VimwikiLink ctermfg=183 ctermbg=NONE cterm=underline
-  hi VimwikiList ctermfg=183 ctermbg=NONE cterm=NONE
-  hi VimwikiNoExistsLink ctermfg=204 ctermbg=NONE cterm=NONE
-  unlet s:t_Co s:italics
-  finish
-endif
+hi Normal ctermfg=189 ctermbg=NONE cterm=NONE
+hi NormalNC ctermfg=189 ctermbg=NONE cterm=NONE
+hi SignColumn ctermfg=189 ctermbg=NONE cterm=NONE
+hi StatusLineNC ctermfg=60 ctermbg=NONE cterm=NONE
+hi DarkenedPanel ctermfg=NONE ctermbg=NONE cterm=NONE
+hi DarkenedStatusline ctermfg=NONE ctermbg=NONE cterm=NONE
+hi Folded ctermfg=189 ctermbg=NONE cterm=NONE
+hi NormalFloat ctermfg=103 ctermbg=237 cterm=NONE
+hi StatusLine ctermfg=103 ctermbg=NONE cterm=NONE
+hi TabLine ctermfg=103 ctermbg=NONE cterm=NONE
+hi TabLineFill ctermfg=NONE ctermbg=NONE cterm=NONE
+hi Comment ctermfg=60 ctermbg=NONE cterm=NONE
+hi Comment cterm=NONE
+hi ColorColumn ctermfg=NONE ctermbg=237 cterm=NONE
+hi Conceal ctermfg=NONE ctermbg=NONE cterm=NONE
+hi CursorColumn ctermfg=NONE ctermbg=235 cterm=NONE
+hi CursorLine ctermfg=NONE ctermbg=235 cterm=NONE
+hi CursorLineNr ctermfg=189 ctermbg=NONE cterm=NONE
+hi DiffAdd ctermfg=NONE ctermbg=238 cterm=NONE
+hi DiffChange ctermfg=NONE ctermbg=237 cterm=NONE
+hi DiffDelete ctermfg=NONE ctermbg=53 cterm=NONE
+hi DiffText ctermfg=NONE ctermbg=237 cterm=NONE
+hi Directory ctermfg=152 ctermbg=NONE cterm=NONE
+hi ErrorMsg ctermfg=204 ctermbg=NONE cterm=bold
+hi FloatBorder ctermfg=60 ctermbg=NONE cterm=NONE
+hi FloatTitle ctermfg=60 ctermbg=NONE cterm=NONE
+hi FoldColumn ctermfg=60 ctermbg=NONE cterm=NONE
+hi IncSearch ctermfg=235 ctermbg=174 cterm=NONE
+hi LineNr ctermfg=60 ctermbg=NONE cterm=NONE
+hi MatchParen ctermfg=189 ctermbg=60 cterm=NONE
+hi ModeMsg ctermfg=103 ctermbg=NONE cterm=NONE
+hi MoreMsg ctermfg=183 ctermbg=NONE cterm=NONE
+hi NonText ctermfg=60 ctermbg=NONE cterm=NONE
+
+hi Pmenu ctermfg=103 ctermbg=NONE cterm=NONE
+hi PmenuSbar ctermfg=NONE ctermbg=235 cterm=NONE
+hi PmenuSel ctermfg=189 ctermbg=237 cterm=NONE
+hi PmenuThumb ctermfg=NONE ctermbg=60 cterm=NONE
+
+hi Question ctermfg=222 ctermbg=NONE cterm=NONE
+hi Search ctermfg=NONE ctermbg=60 cterm=NONE
+hi SpecialKey ctermfg=152 ctermbg=NONE cterm=NONE
+hi SpellBad ctermfg=NONE ctermbg=NONE cterm=undercurl
+hi SpellCap ctermfg=NONE ctermbg=NONE cterm=undercurl
+hi SpellLocal ctermfg=NONE ctermbg=NONE cterm=undercurl
+hi SpellRare ctermfg=NONE ctermbg=NONE cterm=undercurl
+hi TabLineSel ctermfg=189 ctermbg=237 cterm=NONE
+hi Title ctermfg=189 ctermbg=NONE cterm=NONE
+hi VertSplit ctermfg=60 ctermbg=NONE cterm=NONE
+hi Visual ctermfg=NONE ctermbg=60 cterm=NONE
+hi WarningMsg ctermfg=222 ctermbg=NONE cterm=NONE
+hi Boolean ctermfg=174 ctermbg=NONE cterm=NONE
+hi Character ctermfg=NONE ctermbg=NONE cterm=NONE
+hi Conditional ctermfg=31 ctermbg=NONE cterm=NONE
+hi Constant ctermfg=222 ctermbg=NONE cterm=NONE
+hi Debug ctermfg=174 ctermbg=NONE cterm=NONE
+hi Define ctermfg=183 ctermbg=NONE cterm=NONE
+hi Delimiter ctermfg=103 ctermbg=NONE cterm=NONE
+hi Error ctermfg=204 ctermbg=NONE cterm=NONE
+hi Exception ctermfg=31 ctermbg=NONE cterm=NONE
+hi Float ctermfg=222 ctermbg=NONE cterm=NONE
+hi Function ctermfg=174 ctermbg=NONE cterm=NONE
+hi Identifier ctermfg=174 ctermbg=NONE cterm=NONE
+hi Include ctermfg=183 ctermbg=NONE cterm=NONE
+hi Keyword ctermfg=31 ctermbg=NONE cterm=NONE
+hi Label ctermfg=152 ctermbg=NONE cterm=NONE
+hi Macro ctermfg=183 ctermbg=NONE cterm=NONE
+hi Number ctermfg=NONE ctermbg=NONE cterm=NONE
+hi Operator ctermfg=103 ctermbg=NONE cterm=NONE
+hi PreCondit ctermfg=183 ctermbg=NONE cterm=NONE
+hi PreProc ctermfg=183 ctermbg=NONE cterm=NONE
+hi Repeat ctermfg=31 ctermbg=NONE cterm=NONE
+hi Special ctermfg=174 ctermbg=NONE cterm=NONE
+hi SpecialChar ctermfg=174 ctermbg=NONE cterm=NONE
+hi SpecialComment ctermfg=183 ctermbg=NONE cterm=NONE
+hi Statement ctermfg=31 ctermbg=NONE cterm=NONE
+hi StorageClass ctermfg=152 ctermbg=NONE cterm=NONE
+hi String ctermfg=NONE ctermbg=NONE cterm=NONE
+hi Structure ctermfg=152 ctermbg=NONE cterm=NONE
+hi Tag ctermfg=174 ctermbg=NONE cterm=NONE
+hi Todo ctermfg=183 ctermbg=NONE cterm=NONE
+hi Type ctermfg=152 ctermbg=NONE cterm=NONE
+hi Typedef ctermfg=152 ctermbg=NONE cterm=NONE
+hi Underlined ctermfg=NONE ctermbg=NONE cterm=underline
+hi htmlArg ctermfg=183 ctermbg=NONE cterm=NONE
+hi htmlBold ctermfg=NONE ctermbg=NONE cterm=bold
+hi htmlEndTag ctermfg=103 ctermbg=NONE cterm=NONE
+hi htmlH1 ctermfg=183 ctermbg=NONE cterm=bold
+hi htmlH2 ctermfg=152 ctermbg=NONE cterm=bold
+hi htmlH3 ctermfg=174 ctermbg=NONE cterm=bold
+hi htmlH4 ctermfg=222 ctermbg=NONE cterm=bold
+hi htmlH5 ctermfg=31 ctermbg=NONE cterm=bold
+hi htmlItalic ctermfg=NONE ctermbg=NONE cterm=NONE
+hi htmlItalic cterm=NONE
+hi htmlLink ctermfg=183 ctermbg=NONE cterm=NONE
+hi htmlTag ctermfg=103 ctermbg=NONE cterm=NONE
+hi htmlTagN ctermfg=189 ctermbg=NONE cterm=NONE
+hi htmlTagName ctermfg=152 ctermbg=NONE cterm=NONE
+hi markdownDelimiter ctermfg=103 ctermbg=NONE cterm=NONE
+hi markdownH1 ctermfg=183 ctermbg=NONE cterm=bold
+hi markdownH2 ctermfg=152 ctermbg=NONE cterm=bold
+hi markdownH3 ctermfg=174 ctermbg=NONE cterm=bold
+hi markdownH4 ctermfg=222 ctermbg=NONE cterm=bold
+hi markdownH5 ctermfg=31 ctermbg=NONE cterm=bold
+hi markdownH6 ctermfg=152 ctermbg=NONE cterm=bold
+hi markdownLinkText ctermfg=183 ctermbg=NONE cterm=underline
+hi mkdCode ctermfg=152 ctermbg=NONE cterm=NONE
+hi mkdCode cterm=NONE
+hi mkdCodeDelimiter ctermfg=174 ctermbg=NONE cterm=NONE
+hi mkdCodeEnd ctermfg=152 ctermbg=NONE cterm=NONE
+hi mkdCodeStart ctermfg=152 ctermbg=NONE cterm=NONE
+hi mkdFootnotes ctermfg=152 ctermbg=NONE cterm=NONE
+hi mkdID ctermfg=152 ctermbg=NONE cterm=underline
+hi mkdInlineURL ctermfg=183 ctermbg=NONE cterm=underline
+hi mkdListItemLine ctermfg=189 ctermbg=NONE cterm=NONE
+hi mkdRule ctermfg=103 ctermbg=NONE cterm=NONE
+hi VimwikiHR ctermfg=103 ctermbg=NONE cterm=NONE
+hi VimwikiHeader1 ctermfg=183 ctermbg=NONE cterm=bold
+hi VimwikiHeader2 ctermfg=152 ctermbg=NONE cterm=bold
+hi VimwikiHeader3 ctermfg=174 ctermbg=NONE cterm=bold
+hi VimwikiHeader4 ctermfg=222 ctermbg=NONE cterm=bold
+hi VimwikiHeader5 ctermfg=31 ctermbg=NONE cterm=bold
+hi VimwikiHeader6 ctermfg=152 ctermbg=NONE cterm=bold
+hi VimwikiHeaderChar ctermfg=31 ctermbg=NONE cterm=NONE
+hi VimwikiLink ctermfg=183 ctermbg=NONE cterm=underline
+hi VimwikiList ctermfg=183 ctermbg=NONE cterm=NONE
+hi VimwikiNoExistsLink ctermfg=204 ctermbg=NONE cterm=NONE
 
 " Background: dark
 " Color: base           #232136 ~

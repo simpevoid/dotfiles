@@ -1,39 +1,48 @@
-set default-bg                  "#000000"
-set default-fg                  "#e0def4"
 
-set statusbar-fg                "#e0def4"
-set statusbar-bg                "#59546d"
 
-set inputbar-bg                 "#817c9c"
-set inputbar-fg                 "#000000"
 
-set notification-bg             "#817c9c"
-set notification-fg             "#000000"
+set default-bg                  "#000000"  # base
+set default-fg                  "#908caa"  # text
 
-set notification-error-bg       "#817c9c"
-set notification-error-fg       "#ea9a97"
 
-set notification-warning-bg     "#817c9c"
-set notification-warning-fg     "#f6c177"
+set statusbar-bg                "#2a273f"  # surface1
+set statusbar-fg                "#908caa"  # text
 
-set highlight-color             "rgba(0x3e, 0x8f, 0xb0, 0.5)"
-set highlight-active-color      "rgba(0x9c, 0xcf, 0xd8, 0.5)"
+set inputbar-bg                 "#817c9c"  # overlay
+set inputbar-fg                 "#000000"  # base
+
+set notification-bg             "#817c9c"  # overlay
+set notification-fg             "#000000"  # base
+set notification-error-bg       "#817c9c"  # overlay
+set notification-error-fg       "#ea9a97"  # love
+set notification-warning-bg     "#817c9c"  # overlay
+set notification-warning-fg     "#f6c177"  # gold
+
+set highlight-color             "rgba(62, 143, 176, 0.5)"   # foam
+set highlight-active-color      "rgba(156, 207, 216, 0.5)" # iris
 set highlight-transparency 	"0"
 
-set completion-bg               "#817c9c"
-set completion-fg               "#9ccfd8"
+set completion-bg               "#817c9c"  # overlay
+set completion-fg               "#9ccfd8"  # subtext1
+set completion-group-bg         "#59546d"  # surface1
+set completion-group-fg         "#908caa"  # subtext0
+set completion-highlight-bg     "#9ccfd8"  # iris
+set completion-highlight-fg     "#908caa"  # text
 
-set completion-highlight-fg     "#e0def4"
-set completion-highlight-bg     "#9ccfd8"
+set index-bg                    "#000000"  # surface1
+set index-fg                    "#908caa"  # text
+set index-active-bg             "#2a273f"  # iris
+set index-active-fg             "#ffffff"  # base
 
-set recolor-lightcolor          "#000000"
-set recolor-darkcolor           "#e0def4"
+set render-loading              true
+set render-loading-bg           "#000000"  # base
+set render-loading-fg           "#908caa"  # text
 
+# Recolor book content
+set recolor-lightcolor          "#000000"  # base
+set recolor-darkcolor           "#908caa"  # text
 set recolor                     "true"
 set recolor-keephue             "true"
-
-#set recolor                     "false"
-#set recolor-keephue             "false"
 
 map u scroll half-up
 map d scroll half-down
