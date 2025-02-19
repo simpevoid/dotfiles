@@ -1,7 +1,30 @@
 set background=dark
 set tgc
 syntax reset
+
 let g:colors_name = 'rose'
+let s:t_Co = exists('&t_Co') && !has('gui_running') ? (&t_Co ?? 0) : -1
+set t_Co=256
+
+hi! link CurSearch IncSearch
+hi! link diffAdded DiffAdd
+hi! link diffChanged DiffChange
+hi! link diffRemoved DiffDelete
+hi! link StatusLineTerm StatusLine
+hi! link StatusLineTermNC StatusLineNC
+hi! link WildMenu IncSearch
+hi! link markdownH1Delimiter markdownH1
+hi! link markdownH2Delimiter markdownH2
+hi! link markdownH3Delimiter markdownH3
+hi! link markdownH4Delimiter markdownH4
+hi! link markdownH5Delimiter markdownH5
+hi! link markdownH6Delimiter markdownH6
+hi! link markdownURL markdownLinkText
+hi! link mkdLink mkdInlineURL
+hi! link mkdLinkDef mkdInlineURL
+hi! link mkdURL mkdInlineURL
+
+let g:terminal_ansi_colors = ['#393552', '#eb6f92', '#9ccfd8', '#f6c177', '#3e8fb0', '#c4a7e7', '#ea9a97', '#e0def4', '#908caa', '#eb6f92', '#9ccfd8', '#f6c177', '#3e8fb0', '#c4a7e7', '#ea9a97', '#e0def4']
 
 let s:base = "#232136"
 let s:subtle = "#908caa"
@@ -45,7 +68,6 @@ function! s:hi(group, guisp, guifg, guibg, gui, cterm)
 endfunction
 
 
-"function! s:hi(group, guisp, guifg, guibg, gui, cterm)
 
 call s:hi("Normal", "NONE", s:text, s:base, "NONE", "NONE")
 hi Visual guifg=NONE guibg=#44415a gui=NONE cterm=bold
@@ -79,8 +101,8 @@ hi PmenuSel guifg=#e0def4 guibg=#393552 gui=NONE cterm=bold
 hi PmenuThumb guifg=NONE guibg=#44415a gui=NONE cterm=NONE
 "hi PmenuMatch guifg=#2a273f guibg=#908caa gui=NONE cterm=NONE
 
-call s:hi("Question", "NONE", s:blue, "NONE", "NONE", "NONE")
-call s:hi("SpecialKey", "NONE", s:subtext0, "NONE", "NONE", "NONE")
+hi Question guifg=#f6c177 guibg=NONE gui=NONE cterm=NONE
+hi SpecialKey guifg=#9ccfd8 guibg=NONE gui=NONE cterm=NONE
 call s:hi("SpellBad", "NONE", s:base, s:red, "NONE", "NONE")
 call s:hi("SpellCap", "NONE", s:base, s:yellow, "NONE", "NONE")
 call s:hi("SpellLocal", "NONE", s:base, s:blue, "NONE", "NONE")
@@ -91,12 +113,16 @@ hi StatusLineNC guifg=#6e6a86 guibg=#232136 gui=NONE cterm=NONE
 hi StatusLineTerm guifg=#908caa guibg=#2a273f gui=NONE cterm=NONE
 hi StatusLineTermNC guifg=#6e6a86 guibg=#232136 gui=NONE cterm=NONE
 
+hi NormalFloat guifg=NONE guibg=NONE gui=NONE cterm=NONE
+hi DarkenedPanel guifg=NONE guibg=#2a273f gui=NONE cterm=NONE
+hi DarkenedStatusline guifg=NONE guibg=#2a273f gui=NONE cterm=NONE
 hi TabLine guifg=#908caa guibg=#2a273f gui=NONE cterm=NONE
 hi TabLineFill guifg=NONE guibg=#2a273f gui=NONE cterm=NONE
 hi TabLineSel guifg=#e0def4 guibg=#393552 gui=NONE cterm=NONE
 hi Title guifg=#e0def4 guibg=NONE gui=NONE cterm=bold
-call s:hi("WarningMsg", "NONE", s:yellow, "NONE", "NONE", "NONE")
-hi! link WildMenu IncSearch
+hi WarningMsg guifg=#f6c177 guibg=NONE gui=NONE cterm=NONE
+hi Debug guifg=#ea9a97 guibg=NONE gui=NONE cterm=NONE
+hi Delimiter guifg=#908caa guibg=NONE gui=NONE cterm=NONE
 
 hi Comment guifg=#6e6a86 guibg=NONE gui=NONE cterm=NONE
 hi Constant guifg=#f6c177 guibg=NONE gui=NONE cterm=NONE
@@ -105,7 +131,13 @@ hi Statement guifg=#3e8fb0 guibg=NONE gui=NONE cterm=NONE
 hi PreProc guifg=#c4a7e7 guibg=NONE gui=NONE cterm=NONE
 
 
+hi Exception guifg=#3e8fb0 guibg=NONE gui=NONE cterm=NONE
+hi Macro guifg=#c4a7e7 guibg=NONE gui=NONE cterm=NONE
+hi PreCondit guifg=#c4a7e7 guibg=NONE gui=NONE cterm=NONE
 
+hi Tag guifg=#ea9a97 guibg=NONE gui=NONE cterm=NONE
+hi SpecialChar guifg=#ea9a97 guibg=NONE gui=NONE cterm=NONE
+hi SpecialComment guifg=#c4a7e7 guibg=NONE gui=NONE cterm=NONE
 hi Type guifg=#9ccfd8 guibg=NONE gui=NONE cterm=NONE
 hi Special guifg=#ea9a97 guibg=NONE gui=NONE cterm=NONE
 hi Underlined guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
@@ -127,26 +159,4 @@ call s:hi("Operator", "NONE", s:subtle, "NONE", "NONE", "NONE")
 call s:hi("Keyword", "NONE", s:pine, "NONE", "NONE", "NONE")
 call s:hi("Include", "NONE", s:iris, "NONE", "NONE", "bold")
 call s:hi("StorageClass", "NONE", s:foam, "NONE", "NONE", "NONE")
-call s:hi("debugPC", "NONE", "NONE", s:crust, "NONE", "NONE")
-call s:hi("debugBreakpoint", "NONE", s:overlay0, s:base, "NONE", "NONE")
 hi Define guifg=#c4a7e7 guibg=NONE gui=NONE cterm=bold
-
-hi! link CurSearch IncSearch
-hi! link diffAdded DiffAdd
-hi! link diffChanged DiffChange
-hi! link diffRemoved DiffDelete
-hi! link StatusLineTerm StatusLine
-hi! link StatusLineTermNC StatusLineNC
-hi! link WildMenu IncSearch
-hi! link markdownH1Delimiter markdownH1
-hi! link markdownH2Delimiter markdownH2
-hi! link markdownH3Delimiter markdownH3
-hi! link markdownH4Delimiter markdownH4
-hi! link markdownH5Delimiter markdownH5
-hi! link markdownH6Delimiter markdownH6
-hi! link markdownURL markdownLinkText
-hi! link mkdLink mkdInlineURL
-hi! link mkdLinkDef mkdInlineURL
-hi! link mkdURL mkdInlineURL
-
-  let g:terminal_ansi_colors = ['#393552', '#eb6f92', '#9ccfd8', '#f6c177', '#3e8fb0', '#c4a7e7', '#ea9a97', '#e0def4', '#908caa', '#eb6f92', '#9ccfd8', '#f6c177', '#3e8fb0', '#c4a7e7', '#ea9a97', '#e0def4']

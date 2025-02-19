@@ -28,13 +28,13 @@ enddef
 
 def Openpdf()
     const proc = "zathura"
-    const opta = "-C"
+    const opta = "-c"
     const optb = "~/.config/zathura/tex"
     const optc = expand('%:p:r') .. ".pdf"
-    const optd = "--syntex-forward"
-    const opte = line(".") .. ":" .. col(".") .. ":" expand('%:p')
+    const optd = "--synctex-forward"
+    const opte = line(".") .. ":" .. col(".") .. ":" .. expand('%:p')
     const cmd = [proc, opta, optb, optc, optd, opte]
-    job_start(cmd, {"err_cb" : OnError})
+    job_start(cmd, {"err_cb": OnError})
 enddef
 
 

@@ -21,7 +21,8 @@ set wildmenu
 set hidden
 set wildignore=*.exe,*.dll,*.pdb
 set wildmode=longest:full,full
-colorscheme fork
+set bg=dark
+colorscheme new
 
 "StatusLine
 set laststatus=2        " Always display the status line

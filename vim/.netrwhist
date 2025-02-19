@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/navy/.vim/colors'
+let g:netrw_dirhist_9='/home/navy/code/c/strings'
 let g:netrw_dirhist_8='/home/navy/.local/bin/install'
 let g:netrw_dirhist_7='/home/navy/code/c/strings'
 let g:netrw_dirhist_6='/home/navy/.vim/colors'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_4='/home/navy/.config/black-rose/dwm'
 let g:netrw_dirhist_3='/home/navy/.config/black-rose'
 let g:netrw_dirhist_2='/home/navy/.cache/wal'
 let g:netrw_dirhist_1='/home/navy/.config/nrice/nord/dwm'
-let g:netrw_dirhist_0='/home/navy/.config/nrice/nord'
-let g:netrw_dirhist_9='/home/navy/.config/nrice/nord/dmenu'
