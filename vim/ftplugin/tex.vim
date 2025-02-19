@@ -10,7 +10,6 @@ def Clear()
     cd %:p:h
     silent !latexmk -C
     cd -
-    cwindow
     redraw!
 enddef
 
@@ -23,11 +22,19 @@ def Compile()
     redraw!
 enddef
 
+def OnError(channel_name: channel, msg: string)
+    echoerr msg
+enddef
+
 def Openpdf()
-    const opta = "--synctex-forward "
-    const optb = line(".") .. ":" .. col(".") .. ":" .. '%:p'
-    const optc = " -c ~/.config/zathura/tex/ "
-    exec "silent !zathura '%:p:r'.pdf " .. optc .. opta .. optb .. "& disown" 
+    const proc = "zathura"
+    const opta = "-C"
+    const optb = "~/.config/zathura/tex"
+    const optc = expand('%:p:r') .. ".pdf"
+    const optd = "--syntex-forward"
+    const opte = line(".") .. ":" .. col(".") .. ":" expand('%:p')
+    const cmd = [proc, opta, optb, optc, optd, opte]
+    job_start(cmd, {"err_cb" : OnError})
 enddef
 
 

@@ -25,9 +25,8 @@ hi! link mkdLink mkdInlineURL
 hi! link mkdLinkDef mkdInlineURL
 hi! link mkdURL mkdInlineURL
 
-if (has('termguicolors') && &termguicolors) || has('gui_running')
-  let g:terminal_ansi_colors = ['#393552', '#eb6f92', '#3e8fb0', '#f6c177', '#9ccfd8', '#c4a7e7', '#ea9a97', '#e0def4', '#908caa', '#eb6f92', '#3e8fb0', '#f6c177', '#9ccfd8', '#c4a7e7', '#ea9a97', '#e0def4']
-endif
+  let g:terminal_ansi_colors = ['#393552', '#eb6f92', '#9ccfd8', '#f6c177', '#3e8fb0', '#c4a7e7', '#ea9a97', '#e0def4', '#908caa', '#eb6f92', '#9ccfd8', '#f6c177', '#3e8fb0', '#c4a7e7', '#ea9a97', '#e0def4']
+
 hi Normal guifg=NONE guibg=NONE gui=NONE cterm=NONE
 hi NormalNC guifg=#e0def4 guibg=#232136 gui=NONE cterm=NONE
 hi SignColumn guifg=#e0def4 guibg=#232136 gui=NONE cterm=NONE
@@ -199,7 +198,7 @@ hi PmenuThumb ctermfg=NONE ctermbg=60 cterm=NONE
 hi Question ctermfg=222 ctermbg=NONE cterm=NONE
 hi Search ctermfg=NONE ctermbg=60 cterm=NONE
 hi SpecialKey ctermfg=152 ctermbg=NONE cterm=NONE
-hi SpellBad ctermfg=NONE ctermbg=NONE cterm=undercurl
+hi SpellBad ctermfg=174 ctermbg=NONE cterm=underline
 hi SpellCap ctermfg=NONE ctermbg=NONE cterm=undercurl
 hi SpellLocal ctermfg=NONE ctermbg=NONE cterm=undercurl
 hi SpellRare ctermfg=NONE ctermbg=NONE cterm=undercurl

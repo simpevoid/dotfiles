@@ -1,6 +1,5 @@
-syntax on
-runtime ftplugin/man.vim
 packadd! matchit
+syntax on
 "set ruler
 filetype plugin indent on 
 set textwidth=80
@@ -22,8 +21,7 @@ set wildmenu
 set hidden
 set wildignore=*.exe,*.dll,*.pdb
 set wildmode=longest:full,full
-
-colorscheme rose
+colorscheme fork
 
 "StatusLine
 set laststatus=2        " Always display the status line
@@ -35,3 +33,4 @@ set statusline+=%p%%\           	" Cursor position percentage
 
 autocmd BufNewFile *.tex 0r ~/.vim/templates/tex_template.tex
 source ~/.vim/custom/mappings.vim
+runtime ftplugin/man.vim
