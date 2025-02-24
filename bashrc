@@ -11,9 +11,8 @@ alias ls='ls --color=auto'
 alias mv='mv -i'
 alias ll='ls -lh'
 alias grep='grep --color=auto'
-alias cdi='cd "$( find . -maxdepth 1 -type d ! -name ".*" | fzy)"'
-alias clear='echo "use ^L instead :)"'
-alias hs='eval $(fc -ln 1 | fzy)'
+alias cdi='cd $( find . -maxdepth 1 -type d ! -name ".*" | fzy)'
+alias hs='eval $(fc -lnr 1 | fzy)'
 
 # xbps
 alias i='doas xbps-install -S'
@@ -23,10 +22,11 @@ alias r='doas xbps-remove -R'
 
 #apps
 alias vi='vim'
-alias v='nvim'
 
 set -o vi 
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert  'Control-l: clear-screen'
+
+eval "$(zoxide init --cmd cd bash)"
 
 PS1="\[\e[1;35m\]\w \[\e[0m\]λ "

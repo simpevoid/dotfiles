@@ -6,7 +6,9 @@ if exists("g:current_compiler")
 endif
 g:current_compiler = "latex"
 
-CompilerSet makeprg=pdflatex\ -interaction=nonstopmode\ %:p
+if !filereadable('makefile') && !filereadable('Makefile') 
+    CompilerSet makeprg=pdflatex\ -interaction=nonstopmode\ -synctex=-1\ %:p
+endif
 
 CompilerSet errorformat=%E!\ LaTeX\ %trror:\ %m,
 	\%E!\ %m,

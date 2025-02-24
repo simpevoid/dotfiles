@@ -29,12 +29,19 @@ enddef
 def Openpdf()
     const proc = "zathura"
     const opta = "-c"
-    const optb = "~/.config/zathura/tex"
-    const optc = expand('%:p:r') .. ".pdf"
-    const optd = "--synctex-forward"
-    const opte = line(".") .. ":" .. col(".") .. ":" .. expand('%:p')
-    const cmd = [proc, opta, optb, optc, optd, opte]
+    const optb = "~/.config/zathura/tex/"
+    const optc = "-l"
+    const optd = "warning"
+    const opte = expand('%:p:r') .. ".pdf"
+    const optf = "--synctex-forward"
+    const optg = line(".") .. ":" .. col(".") .. ":" .. expand('%:p')
+    const cmd  = [proc, opta, optb, optc, optd, opte, optf, optg]
+
+    if !filereadable('master.tex')
     job_start(cmd, {"err_cb": OnError})
+    else 
+    job_start([proc, opta, optb, optc, optd, "master.pdf", optf, optg], {"err_cb": OnError})
+    endif
 enddef
 
 

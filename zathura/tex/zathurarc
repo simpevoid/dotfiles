@@ -18,9 +18,8 @@ set notification-error-fg       "#ea9a97"  # love
 set notification-warning-bg     "#817c9c"  # overlay
 set notification-warning-fg     "#f6c177"  # gold
 
-set highlight-color             "rgba(62, 143, 176, 0.5)"   # foam
-set highlight-active-color      "rgba(156, 207, 216, 0.5)" # iris
-set highlight-transparency 	"0"
+set highlight-color             "rgba(62, 143, 176, 0)"   # foam
+set highlight-active-color      "rgba(156, 207, 216, 0)" # iris
 
 set completion-bg               "#817c9c"  # overlay
 set completion-fg               "#9ccfd8"  # subtext1

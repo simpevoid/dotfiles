@@ -5,24 +5,18 @@ filetype plugin indent on
 set textwidth=80
 set colorcolumn=80
 set cursorline
-set splitbelow
-set splitright
-set relativenumber
-set number
+set splitbelow splitright
+set nu rnu
 set shiftwidth=4
+set autoindent smartindent
 set cinoptions=l1
-set autoindent
-set smartindent
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-set wildmenu
+set hlsearch incsearch
+set ignorecase smartcase
 set hidden
-set wildignore=*.exe,*.dll,*.pdb
+set wildmenu
+set wildignore=*.exe,*.pdf,*.git/*
 set wildmode=longest:full,full
-set bg=dark
-colorscheme new
+colorscheme mine
 
 "StatusLine
 set laststatus=2        " Always display the status line

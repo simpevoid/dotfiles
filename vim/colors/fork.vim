@@ -88,7 +88,7 @@ hi FoldColumn guifg=#6e6a86 guibg=NONE gui=NONE cterm=NONE
 hi SignColumn guifg=#e0def4 guibg=#232136 gui=NONE cterm=NONE
 hi IncSearch guifg=#232136 guibg=#ea9a97 gui=NONE cterm=bold
 hi Search guifg=NONE guibg=#44415a gui=NONE cterm=NONE
-call s:hi("CursorLineNR", "NONE", s:text, "NONE", "NONE", "NONE")
+call s:hi("CursorLineNR", "NONE", s:iris, "NONE", "NONE", "bold")
 hi LineNr guifg=#6e6a86 guibg=NONE gui=NONE cterm=NONE
 hi MatchParen guifg=#e0def4 guibg=#44415a gui=NONE cterm=NONE
 hi ModeMsg guifg=#908caa guibg=NONE gui=NONE cterm=NONE
@@ -160,3 +160,29 @@ call s:hi("Keyword", "NONE", s:pine, "NONE", "NONE", "NONE")
 call s:hi("Include", "NONE", s:iris, "NONE", "NONE", "bold")
 call s:hi("StorageClass", "NONE", s:foam, "NONE", "NONE", "NONE")
 hi Define guifg=#c4a7e7 guibg=NONE gui=NONE cterm=bold
+
+
+"makefils
+hi makeTarget      guifg=#ea9a97 guibg=NONE gui=NONE     ctermfg=174 ctermbg=NONE cterm=bold   
+hi makeDependency  guifg=#ea9a97 guibg=NONE gui=NONE     ctermfg=174 ctermbg=NONE cterm=NONE   
+hi makeCommands    guifg=#c4a7e7 guibg=NONE gui=NONE     ctermfg=183 ctermbg=NONE cterm=NONE   
+hi makeFunction    guifg=#f6c177 guibg=NONE gui=NONE     ctermfg=222 ctermbg=NONE cterm=NONE   
+hi makeShell       guifg=#9ccfd8 guibg=NONE gui=NONE   	 ctermfg=152 ctermbg=NONE cterm=italic 
+hi makeStatement   guifg=#3e8fb0 guibg=NONE gui=NONE     ctermfg=31  ctermbg=NONE cterm=bold
+hi makeDirective   guifg=#c4a7e7 guibg=NONE gui=NONE     ctermfg=183 ctermbg=NONE cterm=bold   
+hi makeDefine      guifg=#3e8fb0 guibg=NONE gui=NONE     ctermfg=31  ctermbg=NONE cterm=NONE   
+hi makeVariable    guifg=#c4a7e7 guibg=NONE ctermfg=141 
+hi makeBuiltinVar  guifg=#9ccfd8 guibg=NONE gui=NONE     ctermfg=152 ctermbg=NONE cterm=bold   
+hi makeSpecialVar  guifg=#ea9a97 guibg=NONE gui=NONE     ctermfg=174 ctermbg=NONE cterm=bold   
+hi makeOperator    guifg=#908caa guibg=NONE gui=NONE     ctermfg=103 ctermbg=NONE cterm=NONE   
+hi makeWildcards   guifg=#3e8fb0 guibg=NONE gui=NONE     ctermfg=31  ctermbg=NONE cterm=NONE   
+hi makeString      guifg=#f6c177 guibg=NONE gui=NONE     ctermfg=222 ctermbg=NONE cterm=NONE   
+hi makeEscChar     guifg=#ea9a97 guibg=NONE gui=NONE     ctermfg=174 ctermbg=NONE cterm=NONE   
+hi makePath        guifg=#9ccfd8 guibg=NONE gui=NONE     ctermfg=152 ctermbg=NONE cterm=NONE   
+hi makeRule        guifg=#c4a7e7 guibg=NONE gui=NONE     ctermfg=183 ctermbg=NONE cterm=bold   
+hi makeComment     guifg=#908caa guibg=NONE gui=NONE     ctermfg=103 ctermbg=NONE cterm=NONE   
+hi makeNumber      guifg=#f6c177 guibg=NONE gui=NONE     ctermfg=222 ctermbg=NONE cterm=NONE   
+hi makeError       guifg=#eb6f92 guibg=NONE gui=NONE	 ctermfg=204 ctermbg=NONE cterm=bold
+hi makeSpecial     guifg=#ea9a97 guibg=NONE gui=NONE     ctermfg=174 ctermbg=NONE cterm=NONE   
+hi makeDebug       guifg=#ea9a97 guibg=NONE gui=NONE     ctermfg=174 ctermbg=NONE cterm=NONE   
+hi makeTodo        guifg=#c4a7e7 guibg=NONE gui=NONE     ctermfg=183 ctermbg=NONE cterm=NONE   
