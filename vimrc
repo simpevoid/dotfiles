@@ -2,14 +2,15 @@ packadd! matchit
 syntax on
 "set ruler
 filetype plugin indent on 
-set textwidth=80
-set colorcolumn=80
 set cursorline
 set splitbelow splitright
 set nu rnu
 set shiftwidth=4
 set autoindent smartindent
-set cinoptions=l1
+"set cinoptions=t0
+set textwidth=80
+set colorcolumn=80
+"set cinoptions=l1
 set hlsearch incsearch
 set ignorecase smartcase
 set hidden
@@ -29,3 +30,5 @@ set statusline+=%p%%\           	" Cursor position percentage
 autocmd BufNewFile *.tex 0r ~/.vim/templates/tex_template.tex
 source ~/.vim/custom/mappings.vim
 runtime ftplugin/man.vim
+let g:netrw_banner = 0
+let g:netrw_liststyle=3

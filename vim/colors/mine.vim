@@ -38,10 +38,12 @@ hi TabLine guifg=#908caa guibg=#2a273f gui=NONE cterm=NONE
 hi TabLineFill guifg=NONE guibg=#2a273f gui=NONE cterm=NONE
 hi Comment guifg=#6e6a86 guibg=NONE gui=NONE cterm=NONE
 hi Comment gui=NONE cterm=NONE
-hi ColorColumn guifg=NONE guibg=#2a283e gui=NONE cterm=NONE
+hi ColorColumn guifg=NONE guibg=#393552 gui=NONE cterm=NONE
+"hi ColorColumn guifg=NONE guibg=#2a283e gui=NONE cterm=NONE
+"hi CursorLine  guifg=NONE guibg=#2a283e  gui=NONE cterm=NONE
 hi Conceal guifg=NONE guibg=NONE gui=NONE ctermfg=NONE ctermbg=NONE cterm=NONE
 hi CursorColumn guifg=NONE guibg=#2a283e gui=NONE cterm=NONE
-hi CursorLine guifg=NONE guibg=#2a283e gui=NONE cterm=NONE
+hi CursorLine   guifg=NONE guibg=#393552  gui=NONE cterm=NONE
 hi CursorLineNr guifg=#e0def4 guibg=NONE gui=NONE cterm=NONE
 
 hi DiffAdd    guifg=#000000 guibg=#A6E3A1 gui=NONE cterm=NONE
@@ -171,7 +173,7 @@ hi Exception ctermfg=31 ctermbg=NONE cterm=NONE
 hi Float ctermfg=222 ctermbg=NONE cterm=NONE
 hi Function ctermfg=174 ctermbg=NONE cterm=bold
 hi Identifier ctermfg=174 ctermbg=NONE cterm=NONE
-hi Include ctermfg=183 ctermbg=NONE cterm=bold
+hi Include ctermfg=183 ctermbg=NONE cterm=NONE
 hi Keyword ctermfg=31 ctermbg=NONE cterm=NONE
 hi Label ctermfg=152 ctermbg=NONE cterm=NONE
 hi Macro ctermfg=183 ctermbg=NONE cterm=NONE

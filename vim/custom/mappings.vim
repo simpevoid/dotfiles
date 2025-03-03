@@ -7,9 +7,8 @@ nnoremap <leader>pv :Ex<CR>
 nnoremap <silent><Esc><Esc> :nohl <cr>
 
 
-nnoremap <leader>bd :bp \| bd #<CR>
-nnoremap <silent> <leader>n :bn<CR>
-nnoremap <silent> <leader>b :bp<CR>
+nnoremap <silent> <leader>bn :bn<CR>
+nnoremap <silent> <leader>bp :bp<CR>
 
 noremap <leader>; q: 
 
@@ -17,12 +16,11 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
-nnoremap <localleader>c <c-w><c-c>
 
-"inoremap <C-e> <C-r>=expand('
-inoremap <C-d> <Left>
-inoremap <C-f> <Right>
-"inoremap <C-r> <Right>
+
+"inoremap <C-e> <C-r>=expand('')<left><left>
+inoremap <C-e> <Left>
+inoremap <C-r> <Right>
 
 vnoremap <leader>y "+y
 vnoremap <leader>d "_d
