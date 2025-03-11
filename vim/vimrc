@@ -1,0 +1,34 @@
+set nu rnu
+colorscheme nord
+packadd! matchit
+syntax on
+
+filetype plugin indent on 
+set shiftwidth=4
+set textwidth=80
+set splitbelow splitright
+set autoindent smartindent
+
+set cursorline
+set hlsearch incsearch
+set ignorecase smartcase
+set ignorecase
+set smartcase
+
+set wildmenu
+set wildoptions=pum
+set hidden
+set wildignore=*.exe,*.pdf,*.git/*
+
+"StatusLine
+set laststatus=2
+set statusline=%f
+set statusline+=%h%m%r
+set statusline+=%=
+set statusline+=%c\,%l\ \ \ \ \ \ 
+set statusline+=%p%%
+
+source ~/.vim/custom/mapping.vim
+runtime ftplugin/man.vim
+autocmd FileType man setlocal rnu nu
+set keywordprg=:Man

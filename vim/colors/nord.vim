@@ -10,7 +10,8 @@ let s:nord_vim_version="0.19.0"
 set tgc
 set background=dark
 
-let s:nord0_gui = "#13171f"
+let s:old       = "#13171f"
+let s:nord0_gui = "#0F1A2B"
 let s:nord1_gui = "#3B4252"
 let s:nord2_gui = "#434C5E"
 let s:nord3_gui = "#4C566A"
@@ -126,11 +127,11 @@ call s:hi("Italic", "", "", "", "", s:italic, "")
 call s:hi("Underline", "", "", "", "", s:underline, "")
 
 "+--- Editor ---+
-call s:hi("ColorColumn", "", "#2e3440", "NONE", s:nord1_term, "", "")
-"call s:hi("ColorColumn", "", s:nord1_gui, "NONE", s:nord1_term, "", "")
+"call s:hi("ColorColumn", "", "#2e3440", "NONE", s:nord1_term, "", "")
+call s:hi("ColorColumn", "", s:nord1_gui, "NONE", s:nord1_term, "", "")
 call s:hi("Cursor", s:nord0_gui, s:nord4_gui, "", "NONE", "", "")
-call s:hi("CursorLine", "", "#2e3440", "NONE", s:nord1_term, "NONE", "")
-"call s:hi("CursorLine", "", s:nord1_gui, "NONE", s:nord1_term, "NONE", "")
+"call s:hi("CursorLine", "", "#2e3440", "NONE", s:nord1_term, "NONE", "")
+call s:hi("CursorLine", "", s:nord1_gui, "NONE", s:nord1_term, "NONE", "")
 call s:hi("Error", s:nord4_gui, s:nord11_gui, "", s:nord11_term, "", "")
 call s:hi("iCursor", s:nord0_gui, s:nord4_gui, "", "NONE", "", "")
 call s:hi("LineNr", s:nord3_gui, "NONE", s:nord3_term, "NONE", "", "")
@@ -175,10 +176,14 @@ call s:hi("ErrorMsg", s:nord4_gui, s:nord11_gui, "NONE", s:nord11_term, "", "")
 call s:hi("ModeMsg", s:nord4_gui, "", "", "", "", "")
 call s:hi("MoreMsg", s:nord8_gui, "", s:nord8_term, "", "", "")
 call s:hi("Question", s:nord4_gui, "", "NONE", "", "", "")
-call s:hi("StatusLine", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, "NONE", "")
-call s:hi("StatusLineNC", s:nord4_gui, s:nord1_gui, "NONE", s:nord1_term, "NONE", "")
-call s:hi("StatusLineTerm", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, "NONE", "")
-call s:hi("StatusLineTermNC", s:nord4_gui, s:nord1_gui, "NONE", s:nord1_term, "NONE", "")
+
+"call s:hi("StatusLine", s:nord4_gui, s:nord1_gui, "NONE", s:nord1_term, "NONE", "")
+"call s:hi("StatusLineNC", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, "NONE", "")
+call s:hi("StatusLine", s:nord4_gui, s:nord0_gui, "NONE", s:nord1_term, "NONE", "")
+call s:hi("StatusLineNC", s:nord3_gui, s:nord0_gui, s:nord8_term, s:nord3_term, "NONE", "")
+call s:hi("StatusLineTerm", s:nord4_gui, s:nord0_gui, "NONE", s:nord1_term, "NONE", "")
+call s:hi("StatusLineTermNC", s:nord3_gui, s:nord0_gui, s:nord8_term, s:nord3_term, "NONE", "")
+
 call s:hi("WarningMsg", s:nord0_gui, s:nord13_gui, s:nord1_term, s:nord13_term, "", "")
 call s:hi("WildMenu", s:nord8_gui, s:nord1_gui, s:nord8_term, s:nord1_term, "", "")
 
@@ -282,7 +287,7 @@ hi! link awkSpecialCharacter SpecialChar
 hi! link awkSpecialPrintf SpecialChar
 hi! link awkVariables Identifier
 
-call s:hi("cIncluded", s:nord7_gui, "", s:nord7_term, "", "", "")
+"call s:hi("cIncluded", s:nord7_gui, "", s:nord7_term, "", "", "")
 hi! link cOperator Operator
 hi! link cPreCondit PreCondit
 hi! link cConstant Type

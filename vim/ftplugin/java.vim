@@ -2,6 +2,7 @@
 
 vim9script
 
+#colorscheme black
 
 def Compile()
 	w
@@ -13,5 +14,5 @@ enddef
 
 inoremap <buffer> <c-c>  /**/<left><left>
 nnoremap <buffer> <c-c> :norm I//<cr>
-nnoremap <buffer> <silent><leader>cd :norm ^xx<cr>
+nnoremap <buffer> <silent><leader>d :norm ^xx<cr>
 nnoremap <buffer> <silent><localleader>c  <ScriptCmd>Compile()<Cr>

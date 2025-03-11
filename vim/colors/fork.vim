@@ -143,9 +143,15 @@ hi Special guifg=#ea9a97 guibg=NONE gui=NONE cterm=NONE
 hi Underlined guifg=NONE guibg=NONE gui=underline ctermfg=NONE ctermbg=NONE cterm=underline
 hi Error guifg=#eb6f92 guibg=NONE gui=NONE cterm=NONE
 hi Todo guifg=#c4a7e7 guibg=NONE gui=NONE cterm=NONE
-call s:hi("String", "NONE", "NONE", "NONE", "NONE", "NONE")
-call s:hi("Character", "NONE", "NONE", "NONE", "NONE", "NONE")
-call s:hi("Number", "NONE", "NONE", "NONE", "NONE", "NONE")
+hi String guifg=#f6c177 guibg=NONE gui=NONE cterm=NONE
+hi String ctermfg=222 ctermbg=NONE cterm=NONE
+"call s:hi("String", "NONE", "NONE", "NONE", "NONE", "NONE")
+"call s:hi("Character", "NONE", "NONE", "NONE", "NONE", "NONE")
+hi Character guifg=#f6c177 guibg=NONE gui=NONE cterm=NONE
+hi Character ctermfg=222 ctermbg=NONE cterm=NONE
+"call s:hi("Number", "NONE", "NONE", "NONE", "NONE", "NONE")
+hi Number guifg=#f6c177 guibg=NONE gui=NONE cterm=NONE
+hi Number ctermfg=222 ctermbg=NONE cterm=NONE
 hi Boolean guifg=#ea9a97 guibg=NONE gui=NONE cterm=bold
 hi Float guifg=#f6c177 guibg=NONE gui=NONE cterm=NONE
 hi Function guifg=#ea9a97 guibg=NONE gui=NONE cterm=bold
@@ -155,7 +161,9 @@ call s:hi("Label", "NONE", s:foam, "NONE", "NONE", "NONE")
 
 hi Structure guifg=#9ccfd8 guibg=NONE gui=NONE cterm=NONE
 hi Typedef guifg=#9ccfd8 guibg=NONE gui=NONE cterm=NONE
-call s:hi("Operator", "NONE", s:subtle, "NONE", "NONE", "NONE")
+"call s:hi("Operator", "NONE", s:subtle, "NONE", "NONE", "NONE")
+hi Operator guifg=#908caa guibg=NONE gui=NONE cterm=NONE
+  hi Operator ctermfg=103 ctermbg=NONE cterm=NONE
 call s:hi("Keyword", "NONE", s:pine, "NONE", "NONE", "NONE")
 call s:hi("Include", "NONE", s:iris, "NONE", "NONE", "bold")
 call s:hi("StorageClass", "NONE", s:foam, "NONE", "NONE", "NONE")
