@@ -1,6 +1,3 @@
-
-
-
 vim9script
 
 compiler tex

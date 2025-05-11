@@ -1,4 +1,3 @@
-
 highlight clear
 
 if exists("syntax_on")
@@ -8,17 +7,20 @@ endif
 set background=dark
 let g:colors_name = "zozin"
 
-let s:black  = ["#1c1c1c", "234"]
-let s:blue   = ["#87afd7", "110"]
+let s:red    = ["#f43841", "167"]  " cterm 167 ≈ #c73c3f
+let s:green  = ["#73d936", "112"]
+let s:yellow = ["#ffdd33", "220"]
+let s:blue   = ["#96a6c8", "110"]
+let s:white  = ["#e4e4e4", "254"]
+let s:black  = ["#181818", "234"]
+let s:gray   = ["#282828", "235"]
 let s:brown  = ["#af875f", "137"]
 let s:cyan   = ["#afd7af", "151"]
-let s:gray   = ["#262626", "235"]
-let s:green  = ["#87d75f", "113"]
-let s:red    = ["#ff5f5f", "203"]
-let s:white  = ["#e4e4e4", "254"]
-let s:yellow = ["#ffd700", "220"]
 
-let s:bold      = "bold"
+let s:gray   = ["#262626", "235"]
+
+
+let s:bold      = "none"
 let s:italic    = "italic"
 let s:underline = "underline"
 
@@ -61,6 +63,8 @@ call s:hl("ColorColumn",    { "bg": s:gray })
 call s:hl("Comment",        { "fg": s:brown })
 call s:hl("Constant",       { "fg": s:cyan })
 call s:hl("CursorLine",     { "bg": s:gray })
+call s:hl("CursorLineNr",   { "fg": s:yellow })
+call s:hl("LineNr",    	    { "fg": s:gray })
 call s:hl("DiffAdd",        { "fg": s:green })
 call s:hl("DiffChange",     { "fg": s:blue })
 call s:hl("DiffDelete",     { "fg": s:red })

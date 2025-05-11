@@ -1,0 +1,10 @@
+#!/bin/sh
+
+#tmpDir="/tmp/dtach"
+
+#[ ! -e "$tmpDir" ] && mkdir -p "$tmpDir"
+
+sel=$(dmenu_path | fzy)
+
+#[ -n "$sel" ] && dtach -n "$tmpDir/tmp-$$" "$sel"
+[ -n "$sel" ] && setsid -f "$sel"

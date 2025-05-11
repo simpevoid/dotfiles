@@ -1,6 +1,5 @@
+colorscheme mine
 set nu rnu
-colorscheme nord
-packadd! matchit
 syntax on
 
 filetype plugin indent on 
@@ -9,26 +8,27 @@ set textwidth=80
 set splitbelow splitright
 set autoindent smartindent
 
+set cursorlineopt=number
 set cursorline
-set hlsearch incsearch
+set incsearch
 set ignorecase smartcase
-set ignorecase
-set smartcase
 
 set wildmenu
-set wildoptions=pum
+set wildoptions=fuzzy
 set hidden
-set wildignore=*.exe,*.pdf,*.git/*
+set wildignore=*.git/*
 
 "StatusLine
 set laststatus=2
-set statusline=%f
-set statusline+=%h%m%r
-set statusline+=%=
-set statusline+=%c\,%l\ \ \ \ \ \ 
-set statusline+=%p%%
+set statusline=%<%t\ %h%w%m%r%=%-14.(%l,%c%V%)\ %P
 
 source ~/.vim/custom/mapping.vim
 runtime ftplugin/man.vim
-autocmd FileType man setlocal rnu nu
 set keywordprg=:Man
+
+set noesckeys
+set shm+=IC
+set history=200
+set gp=git\ grep\ -n
+"set autochdir
+packadd! comment

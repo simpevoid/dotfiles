@@ -1,16 +1,6 @@
-
-
-
-
-
-
-
-
-setxkbmap -layout us,ara -variant ,digits -option grp:sclk_toggle caps:escape altwin:menu_win &
-#slstatus &
+setxkbmap -layout us,ara -variant ,digits grp:sclk_toggle &
+slstatus &
 sxhkd &
-#xset r rate 350 40
+#xsetroot -solid "#0F1A2B" &
 xset -r
-hsetroot -solid "#282828" &
-doas shutdown -P 22:30 &
 dwm

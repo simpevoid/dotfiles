@@ -1,0 +1,10 @@
+#!/bin/sh
+
+
+
+tmpDir="/tmp/dtach"
+path="$HOME/Documents/books/math"
+
+sel=$(cd $path && find . -type f | fzy)
+
+[ -n "$sel" ] && dtach -n "$tmpDir/tmp-$$" zathura "$path/$sel"
